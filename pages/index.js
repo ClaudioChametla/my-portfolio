@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import { Text, Grid, GridItem, Image, Stack,HStack,StackDivider,VStack,Box } from "@chakra-ui/react"
+import { Text, Grid, GridItem, Image, Stack,HStack,StackDivider,VStack,Box, Center } from "@chakra-ui/react"
 import { DarkModeSwitch } from '../components/DarkModeSwitch'
 import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react"
-import { List, ListItem, ListIcon, OrderedList, UnorderedList } from "@chakra-ui/react"
-
+import { List, ListItem, ListIcon,MdCheckCircle, OrderedList, UnorderedList,Link } from "@chakra-ui/react"
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 export default function Home() {
   return (
@@ -26,9 +26,10 @@ export default function Home() {
 
       <Grid templateColumns="1" gap={50} >
         <Box w="100%" h="10"/>
-        <Box w="auto" h="250px" bgImage="https://img.wallpapersafari.com/desktop/1366/768/66/45/rMU0EB.png"> 
+        <Box w="auto" h="325px" bgImage="https://i.pinimg.com/originals/7e/e6/87/7ee68785e912300b89900a6243419f3b.gif"> 
         
-        <Text fontSize="4xl" fontFamily="monospace" color="white">Portafolio</Text>
+        <Text fontSize="6xl" fontFamily="cursive" color="white">Mi Portafolio</Text>
+        <br/>
         
         <Image
             borderRadius="full"
@@ -36,8 +37,8 @@ export default function Home() {
             src="https://scontent.fmex33-1.fna.fbcdn.net/v/t1.6435-9/37693347_220925092084311_7773108262718668800_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_eui2=AeEkVv5yv-tc5O8nQlvvWgPtxk8IyK4KZ-zGTwjIrgpn7POJ9nok1TNC4spCPIyMAxrLDoS_XnDgT5sye5-KhEDY&_nc_ohc=4vXpe1pzIsUAX-ajf1F&_nc_ht=scontent.fmex33-1.fna&oh=ac80220724abc3e585c051b1a7fa2804&oe=613FA4E0"
             alt="foto de perfil claudio"
           />
-        
-        <Text fontSize="lg" color="white">Mi nombre es Claudio Chametla progrador web. </Text>
+        <br/>
+        <Text fontSize="20px" color="white">Mi nombre es Claudio Chametla y soy progrador web. </Text>
         
         </Box>
         
@@ -53,75 +54,182 @@ export default function Home() {
         <Box h="10px"/>
 
         <VStack
-             divider={<StackDivider borderColor="" />}
+             divider={<StackDivider borderColor="green" />}
               spacing={1}
               align="stretch"
+              
+              
             >
 
 
 
-          <Box bgImage="https://images3.alphacoders.com/813/813087.jpg" h="500px" w="auto">
-          <Text fontSize="3xl" fontFamily="monospace" color="white"> Bienvenido </Text>
-          <Text fontSize="lg" color="white">Este en un espacio para mostrar mi portafolio web. </Text>
+          {/*-----------------------------------BIENVENIDO-------------------------------------------------------*/}
+          <Box align="center"
+              justify="center" 
+              bgImage="https://images3.alphacoders.com/813/813087.jpg" h="600px" w="100%" >
+          <Center w="80%" flexDir="column">
+            <Text fontSize="6xl" fontFamily="monospace" color="white"> Bienvenido </Text>
+          <hr/>
+          <Text 
+            fontSize="20px" 
+            fontFamily="sans-serif" 
+            color="white" 
+            align="center">Este en un espacio para mostrar 
+          mi portafolio web el cual esta desarrollado en Next JS el cual es un Framework construido sobre React, la libreria 
+          de Javascript. 
+          <br/>
+          Ademas utilizando la libreria de Chakra UI. 
+          
+          
+          </Text>
+          <Box h="100px"/>
+          <VStack
+            divider={<StackDivider borderColor="" />}
+            spacing={1}
+            >
+              <Image w="250px" h="auto" src="https://static.vecteezy.com/system/resources/thumbnails/002/100/588/small/folder-of-documents-portfolio-with-files-linear-outline-business-icon-neon-style-light-decoration-icon-bright-electric-symbol-isolated-on-brick-wall-vector.jpg" alt="Imagen Portafolio" />
+          </VStack>
+          </Center>
+          
           </Box>
-          
+          {/*-----------------------------------FIN BIENVENIDO-------------------------------------------------------*/}
 
-          
+          {/*-----------------------------------PROYECTO-------------------------------------------------------*/}          
           <Box backgroundImage="https://besthqwallpapers.com/Uploads/2-1-2021/150010/thumb2-github-red-logo-4k-red-brickwall-github-logo-social-networks.jpg" h="500px" w="auto">
-            <Text fontSize="3xl" fontFamily="monospace" color="white">Proyectos</Text>
-            <Text fontSize="lg" color="white">Algunos de mis proyectos y mas información de mi perfil la puedes encontrar en las siguientes plataformas. </Text>
+            <Text fontSize="6xl" fontFamily="monospace" color="white">Proyectos</Text>
+            <hr/>
+            <Text 
+              fontSize="1rem" 
+              color="white">Algunos de mis proyectos estan hosteados en 
+              Git Hub y CodePen ademas de mas información de mi perfil 
+              laboral se puede encontrar en las siguientes plataformas. 
+            <br/>
+            Solo da un click para acceder a las diferentes plataformas donde encontraras mas información
+            de mis proyectos, lo cuales incluyen direfentes sitios web y mas.   </Text>
+            <br/>
             
+            <VStack>
             <List spacing={5} color="white">
+            
+          
               
-                <ListItem>   
+                <ListItem fontSize="2rem"> 
+                
                   Mis proyectos:
                 </ListItem>
               
                 <ListItem>
-                  Git Hub
+                <ListIcon as={MdCheckCircle} color="green.500" />
+                    <Link href="https://github.com/ClaudioChametla" isExternal>
+                      Git Hub <ExternalLinkIcon mx="2px" />
+                    </Link>  
+                  
                 </ListItem>
               
                 <ListItem>
-                  Code Pen
+                <ListIcon as={MdCheckCircle} color="green.500" />  
+                <Link href="https://codepen.io/your-work" isExternal>
+                      Code Pen <ExternalLinkIcon mx="2px" />
+                </Link>  
                 </ListItem>
         
                 <ListItem>
-                  LinkedIn
+                <ListIcon as={MdCheckCircle} color="green.500" />  
+                  <Link href="https://www.linkedin.com/in/claudiochametla/" isExternal>
+                      LinkedIn <ExternalLinkIcon mx="2px" />
+                  </Link>  
                 </ListItem>
             </List>
+            </VStack>
              
           </Box>
-
+          {/*-----------------------------------FIN PROYECTO-------------------------------------------------------*/}
           
-          <Box  bgImage="https://cdn.wallpapersafari.com/69/34/54CPDm.png"  h="500px" w="auto" >
-          <Text fontSize="3xl" fontFamily="monospace" color="white" textAlign="center">Habilidades</Text>
-          <Text fontSize="lg" color="white" textAlign="center">Algunos de las habilidades que domino en el entorno de desarrollador web son las siguientes:  </Text>
-          <List spacing={10} color="white">
+          
+          {/*-----------------------------------HABILIDADES-------------------------------------------------------*/}    
+          <Box  bgImage="https://cdn.wallpapersafari.com/69/34/54CPDm.png"  h="600px" w="auto" >
+          
+          
+          <Text fontSize="6xl" fontFamily="monospace" color="white" textAlign="center">Habilidades</Text>
+          <hr/>
+          <Text fontSize="20px" color="white" textAlign="center">Algunos de las habilidades que domino en el entorno de desarrollador web son las siguientes:  </Text>
+          
+          <br/>
+          <VStack
+              spacing={3}
+            >
+
+          <List spacing={1} color="white" alignContent="center">
+              <Image  
+              w="250px" 
+              h="auto" 
+              src="https://static.vecteezy.com/system/resources/previews/002/221/955/non_2x/coding-neon-programming-icon-vector.jpg" 
+              alt="Imagen Habilidad coding" />
+          
               
-                <ListItem>   
-                  Software
+                <ListItem fontSize="2rem">
+                     
+                  Tecnologias:
                 </ListItem>
-              
                 <ListItem>
+                <ListIcon as={MdCheckCircle} color="green.500" />
                   HTML 5
                 </ListItem>
-              
                 <ListItem>
+                <ListIcon as={MdCheckCircle} color="green.500" />
                   CCS 3
                 </ListItem>
-        
                 <ListItem>
+                <ListIcon as={MdCheckCircle} color="green.500" />
                   JAVASCRIPT
                 </ListItem>
+                <ListItem>
+                <ListIcon as={MdCheckCircle} color="green.500" />
+                  REACT
+                </ListItem>
+                <ListItem>
+                <ListIcon as={MdCheckCircle} color="green.500" />
+                  NEXT JS
+                </ListItem>
+                
             </List>
+            </VStack>
           </Box>
+        {/*----------------------------------- FIN HABILIDADES-------------------------------------------------------*/}
+        
+        
+        {/*-----------------------------------ACERCA DE MI-------------------------------------------------------*/}
+          <Box bgImage="https://wallpaper.dog/large/445126.jpg" h="600px" w="auto">
+          <Text fontSize="6xl" fontFamily="monospace" color="white" textAlign="center"> Acerca de mi </Text>
+          <hr/>
+          <Text fontSize="1rem" 
+          color="white" 
+          textAlign="center">
+            Soy un programador mexicano. <br/> 
+            Nacido un Octubre en la Ciudad de México crecí en la en este lugar hasta los 10 años y desde 
+            esa edad siempre habia tenido curiosidad por el mundo de la tecnologia e interes por las computadoras
+             <br/>
+            Fue hasta la edad de 13 años que mamá compro mi primera computadora. Con 512 MB de RAM y un procesador de
+            900 Mhz empecé a conocer el mundo de Internet. Un dinosaurio pero fiel compañera. <br/>
+            Desde niño mi computadora me sirvio para acercarme a diferentes softwares y juegos y al paso de los años
+            elegí el camino de la computación y no fue hasta llegar a la universidad que tuve mi primer laptop y
+            porfin programar mi primer <Text fontSize="25px"color="green"> Hello World. </Text>        
+          </Text>
+          <VStack
+              divider={<StackDivider/>}
+              spacing={1}
+            >
+              
+              <Image  
+              w="250px" 
+              h="auto" 
+              src="https://st2.depositphotos.com/14128164/42736/v/600/depositphotos_427361636-stock-illustration-beautiful-colorful-illustration-with-shiny.jpg" 
+              alt="Imagen Habilidad coding" />
+            </VStack>
 
 
-          <Box bgImage="https://wallpaper.dog/large/20351149.jpg" h="500px" w="auto">
-          <Text fontSize="3xl" fontFamily="monospace" color="white" textAlign="center"> Acerca de mi </Text>
-          <Text fontSize="lg" color="white" textAlign="center">Soy un programador mexicano. </Text>
           </Box>
-         
+        {/*-----------------------------------FIN ACERCA DE MI-------------------------------------------------------*/}
           
         </VStack>
       
@@ -135,44 +243,58 @@ export default function Home() {
       
 
 
-        <Stack 
-        direction="column" 
-        bgImage="https://www.nicepng.com/png/full/785-7856337_1996-2013-netgear-footer-with-no-background.png"
+        <HStack 
+         
+        bgImage="https://upload.wikimedia.org/wikipedia/commons/4/4c/Digital_rain_banner.gif"
         h="250px"
         w="auto"
-        gap="0"
+        spacing={10}
         justify="center"
         
         >
-              <Text fontSize="3xl" fontFamily="monospace" color="white"> 
-              Claudio Chametla Torres 
-              <Avatar margin="10 px" name="Claudio" src="https://bit.ly/broken-link" />
-              </Text>
-        
+          <Image  
+              borderRadius="full"
+              w="200px" 
+              h="auto" 
+              src="https://scontent.fmex33-1.fna.fbcdn.net/v/t1.6435-9/83245201_1561723720649296_5245982117438947328_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=174925&_nc_eui2=AeEjX_e4IFK2KtFu_DCgCoDWsd5Lk4ZH8ICx3kuThkfwgDXIDJFvNvd9uealUdNRWXZAOhbUiKx7sdzwehukhx5-&_nc_ohc=YqH_rrENSSQAX8PCaQj&_nc_ht=scontent.fmex33-1.fna&oh=7f01c79bf39e65c9ff120bc45a6192d6&oe=61412457" 
+              alt="claudiofooterfoto" />
 
-              <List spacing={1} color="white" >
               
-              <ListItem>   
+              <List spacing={2} color="white" fontSize="20px" >
+              
+              <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" /> 
+
                 Correo:
               </ListItem>
             
               <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" /> 
                 clauchametla.777@gmail.com
               </ListItem>
             
               <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" /> 
                 Telefono:
               </ListItem>
       
               <ListItem>
+              <ListIcon as={MdCheckCircle} color="green.500" /> 
                 56 15 64 49 57
               </ListItem>
           </List>
+
+          <Avatar name="Claudio" src="https://bit.ly/broken-link" />
+          <Text fontSize="2rem" fontFamily="monospace" color="white"> 
+              Claudio Chametla Torres 
+              
+              </Text>
         
+
           
           
           
-        </Stack>
+        </HStack>
   
       
       </footer>

@@ -30,6 +30,7 @@ export const DarkModeSwitch = () => {
             aria-label="Home"
             my={5}
             w="100%"
+            scroll="true"
             
             
             

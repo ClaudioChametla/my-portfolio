@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import { Text, Grid, GridItem, Image, Stack,HStack,StackDivider,VStack,Box, Center } from "@chakra-ui/react"
 import { DarkModeSwitch } from '../components/DarkModeSwitch'
-import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react"
-import { List, ListItem, ListIcon,MdCheckCircle, OrderedList, UnorderedList,Link } from "@chakra-ui/react"
+import { useMediaQuery, Avatar, List, ListItem, ListIcon,MdCheckCircle,Link,Text, Image, Stack,HStack,StackDivider,VStack,Box, Center  } from "@chakra-ui/react"
 import { ExternalLinkIcon } from '@chakra-ui/icons'
+
 
 export default function Home() {
   return (
@@ -23,12 +22,13 @@ export default function Home() {
 
 
       <main>
-
-      <Grid templateColumns="1" gap={50} >
-        <Box w="100%" h="10"/>
-        <Box w="auto" h="325px" bgImage="https://i.pinimg.com/originals/7e/e6/87/7ee68785e912300b89900a6243419f3b.gif"> 
+      <Box />
+      
         
-        <Text fontSize="6xl" fontFamily="cursive" color="white">Mi Portafolio</Text>
+
+        <Box h="100vh" clipPath="polygon(100% 0, 100% 50%, 100% 90%, 50% 100%, 0 90%, 0% 0%)" bgColor="cyan.900"> 
+        <Center w="80%" flexDir="column">
+        <Text fontSize="6xl" fontFamily="cursive">Mi Portafolio</Text>
         <br/>
         
         <Image
@@ -38,12 +38,11 @@ export default function Home() {
             alt="foto de perfil claudio"
           />
         <br/>
-        <Text fontSize="20px" color="white">Mi nombre es Claudio Chametla y soy progrador web. </Text>
-        
+        <Text fontSize="2rem">Mi nombre es Claudio Chametla y soy progrador web. </Text>
+        </Center>
         </Box>
         
-        </Grid>
-      
+        
 
 
 
@@ -54,7 +53,7 @@ export default function Home() {
         <Box h="10px"/>
 
         <VStack
-             divider={<StackDivider borderColor="green" />}
+             
               spacing={1}
               align="stretch"
               
@@ -66,15 +65,14 @@ export default function Home() {
           {/*-----------------------------------BIENVENIDO-------------------------------------------------------*/}
           <Box align="center"
               justify="center" 
-              bgImage="https://images3.alphacoders.com/813/813087.jpg" h="600px" w="100%" >
+              bgImage="" h="600px" w="100%" >
           <Center w="80%" flexDir="column">
-            <Text fontSize="6xl" fontFamily="monospace" color="white"> Bienvenido </Text>
+            <Text fontSize="6xl" fontFamily="cursive"> Bienvenido </Text>
           <hr/>
           <Text 
             fontSize="20px" 
             fontFamily="sans-serif" 
-            color="white" 
-            align="center">Este en un espacio para mostrar 
+            >Este en un espacio para mostrar 
           mi portafolio web el cual esta desarrollado en Next JS el cual es un Framework construido sobre React, la libreria 
           de Javascript. 
           <br/>
@@ -83,37 +81,37 @@ export default function Home() {
           
           </Text>
           <Box h="100px"/>
-          <VStack
-            divider={<StackDivider borderColor="" />}
-            spacing={1}
-            >
-              <Image w="250px" h="auto" src="https://static.vecteezy.com/system/resources/thumbnails/002/100/588/small/folder-of-documents-portfolio-with-files-linear-outline-business-icon-neon-style-light-decoration-icon-bright-electric-symbol-isolated-on-brick-wall-vector.jpg" alt="Imagen Portafolio" />
-          </VStack>
+          
+              <Image borderRadius="full" w="250px" h="auto" src="https://static.vecteezy.com/system/resources/thumbnails/002/100/588/small/folder-of-documents-portfolio-with-files-linear-outline-business-icon-neon-style-light-decoration-icon-bright-electric-symbol-isolated-on-brick-wall-vector.jpg" alt="Imagen Portafolio" />
+          
           </Center>
           
           </Box>
           {/*-----------------------------------FIN BIENVENIDO-------------------------------------------------------*/}
 
           {/*-----------------------------------PROYECTO-------------------------------------------------------*/}          
-          <Box backgroundImage="https://besthqwallpapers.com/Uploads/2-1-2021/150010/thumb2-github-red-logo-4k-red-brickwall-github-logo-social-networks.jpg" h="500px" w="auto">
-            <Text fontSize="6xl" fontFamily="monospace" color="white">Proyectos</Text>
-            <hr/>
+          <Box align="center"
+              justify="center" h="600px">
+          
+            <Text fontSize="6xl" fontFamily="cursive" >Proyectos</Text>
+            <Center  w="80%" flexDir="column">
             <Text 
-              fontSize="1rem" 
-              color="white">Algunos de mis proyectos estan hosteados en 
+              fontSize="20px" 
+              >Algunos de mis proyectos estan hosteados en 
               Git Hub y CodePen ademas de mas información de mi perfil 
               laboral se puede encontrar en las siguientes plataformas. 
             <br/>
             Solo da un click para acceder a las diferentes plataformas donde encontraras mas información
             de mis proyectos, lo cuales incluyen direfentes sitios web y mas.   </Text>
+            
+            </Center>
             <br/>
-            
+            <br/>
             <VStack>
-            <List spacing={5} color="white">
+            <List spacing={5}>
             
-          
-              
-                <ListItem fontSize="2rem"> 
+           
+                <ListItem fontSize="2rem" fontFamily="cursive"> 
                 
                   Mis proyectos:
                 </ListItem>
@@ -140,33 +138,48 @@ export default function Home() {
                   </Link>  
                 </ListItem>
             </List>
+            <Center>
+            
+              <Image borderRadius="full"
+               w="250px" 
+               h="auto" 
+               src="https://besthqwallpapers.com/Uploads/12-1-2021/151326/thumb2-github-purple-logo-4k-purple-brickwall-github-logo-social-networks.jpg" alt="Imagen Portafolio" />
+          </Center>
             </VStack>
-             
+          
           </Box>
+          <Box h="100px"/>
           {/*-----------------------------------FIN PROYECTO-------------------------------------------------------*/}
           
           
           {/*-----------------------------------HABILIDADES-------------------------------------------------------*/}    
-          <Box  bgImage="https://cdn.wallpapersafari.com/69/34/54CPDm.png"  h="600px" w="auto" >
+          <Box  align="center"
+              justify="center" h="700px" w="auto" >
+          
+
           
           
-          <Text fontSize="6xl" fontFamily="monospace" color="white" textAlign="center">Habilidades</Text>
-          <hr/>
-          <Text fontSize="20px" color="white" textAlign="center">Algunos de las habilidades que domino en el entorno de desarrollador web son las siguientes:  </Text>
+          <Text fontSize="6xl" fontFamily="cursive" >Habilidades</Text>
+         
+          <Text fontSize="20px" >Algunos de las habilidades que domino en el entorno 
+          de desarrollador web son las siguientes:  </Text>
           
           <br/>
+
+
           <VStack
               spacing={3}
             >
 
-          <List spacing={1} color="white" alignContent="center">
-              <Image  
+          <List spacing={1} alignContent="center">
+              <Image
+              borderRadius="full"  
               w="250px" 
               h="auto" 
               src="https://static.vecteezy.com/system/resources/previews/002/221/955/non_2x/coding-neon-programming-icon-vector.jpg" 
               alt="Imagen Habilidad coding" />
           
-              
+              <br/>
                 <ListItem fontSize="2rem">
                      
                   Tecnologias:
@@ -199,12 +212,18 @@ export default function Home() {
         
         
         {/*-----------------------------------ACERCA DE MI-------------------------------------------------------*/}
-          <Box bgImage="https://wallpaper.dog/large/445126.jpg" h="600px" w="auto">
-          <Text fontSize="6xl" fontFamily="monospace" color="white" textAlign="center"> Acerca de mi </Text>
-          <hr/>
+        
+          <Box 
+              
+              align="center"
+              justify="center" bgImage="" h="600px" w="auto">
+          
+          <Text fontSize="6xl" fontFamily="cursive" > Acerca de mi </Text>
+          
+          <Center w="70%" flexDir="column">
           <Text fontSize="1rem" 
-          color="white" 
-          textAlign="center">
+          
+          >
             Soy un programador mexicano. <br/> 
             Nacido un Octubre en la Ciudad de México crecí en la en este lugar hasta los 10 años y desde 
             esa edad siempre habia tenido curiosidad por el mundo de la tecnologia e interes por las computadoras
@@ -215,26 +234,30 @@ export default function Home() {
             elegí el camino de la computación y no fue hasta llegar a la universidad que tuve mi primer laptop y
             porfin programar mi primer <Text fontSize="25px"color="green"> Hello World. </Text>        
           </Text>
+          <br/>
+        </Center>
           <VStack
               divider={<StackDivider/>}
               spacing={1}
             >
               
-              <Image  
+              <Image
+              borderRadius="full"  
               w="250px" 
               h="auto" 
               src="https://st2.depositphotos.com/14128164/42736/v/600/depositphotos_427361636-stock-illustration-beautiful-colorful-illustration-with-shiny.jpg" 
               alt="Imagen Habilidad coding" />
             </VStack>
 
-
+            
           </Box>
+        
         {/*-----------------------------------FIN ACERCA DE MI-------------------------------------------------------*/}
           
         </VStack>
       
       
-      <Box h="10px"/>
+      <Box h="100px"/>
         
       </main>
 
@@ -245,7 +268,8 @@ export default function Home() {
 
         <HStack 
          
-        bgImage="https://upload.wikimedia.org/wikipedia/commons/4/4c/Digital_rain_banner.gif"
+         bgGradient="linear(to-r, blue.700, pink.500)"
+        /*bgImage="https://upload.wikimedia.org/wikipedia/commons/4/4c/Digital_rain_banner.gif"*/
         h="250px"
         w="auto"
         spacing={10}
@@ -298,6 +322,9 @@ export default function Home() {
   
       
       </footer>
+
+
+      
     </Stack>
   )
 }

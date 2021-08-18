@@ -8,6 +8,7 @@ export const DarkModeSwitch = () => {
   return (
     <Flex
       position="fixed"
+      zIndex="99"
       top="1rem"
       right="1rem"
       align="center"

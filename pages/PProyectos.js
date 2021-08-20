@@ -12,6 +12,7 @@ export default function PProyectos(){
                     <NavBar/>
                     <Box h="100px"/>
                     <Proyectos/>
+                    <Box h="100px"/>
                 </Center>
             <Footer/>
         </Stack>

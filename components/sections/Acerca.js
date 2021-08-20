@@ -1,4 +1,4 @@
-import { Text, Image,StackDivider,VStack,Box, Center, Flex  } from "@chakra-ui/react"
+import { Text, Image,StackDivider,VStack,Box,Link, Center, Flex  } from "@chakra-ui/react"
 
 const acerca = () => {
   return(
@@ -23,13 +23,19 @@ const acerca = () => {
           divider={<StackDivider/>}
           spacing={1}
         >
-        <Image
-          borderRadius="full"  
-          w="250px" 
-          h="auto" 
-          src="https://st2.depositphotos.com/14128164/42736/v/600/depositphotos_427361636-stock-illustration-beautiful-colorful-illustration-with-shiny.jpg" 
-          alt="Imagen Habilidad coding" 
-        />
+        <Link
+					href="https://www.google.com/logos/2010/pacman10-i.html"
+					target="-blank"
+					_hover={{ transform: "scale(1.1)" }}
+				>
+          <Image
+            borderRadius="full"  
+            w="250px" 
+            h="auto" 
+            src="https://st2.depositphotos.com/14128164/42736/v/600/depositphotos_427361636-stock-illustration-beautiful-colorful-illustration-with-shiny.jpg" 
+            alt="Imagen Habilidad coding" 
+          />
+        </Link>    
         </VStack>
       </VStack>
           

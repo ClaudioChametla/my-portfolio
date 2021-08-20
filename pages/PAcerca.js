@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import Acerca from '../components/sections/Acerca'
 import Footer from '../components/Footer'
 
-import { useMediaQuery, Stack,Box, Center } from "@chakra-ui/react"
+import {  Stack,Box, Center } from "@chakra-ui/react"
 export default function PAcerca(){
     return(
         <Stack>
@@ -11,6 +11,7 @@ export default function PAcerca(){
                 <Hero/>
                 <NavBar/>
                 <Acerca/>
+                <Box h="100px"/>
             </Center>
             <Footer/>
       </Stack>

@@ -8,7 +8,7 @@ const hero = () => {
             <Center >
                     <Box w="100%" flexDir="column"> 
                     
-                        <Text fontSize="6xl" fontFamily="cursive">Mi Portafolio</Text>
+                        <Text color="white" fontSize="6xl" fontFamily="cursive">Mi Portafolio</Text>
                         <br/>
                         <Image
                             borderRadius="full"
@@ -17,10 +17,9 @@ const hero = () => {
                             alt="foto de perfil claudio"
                         />
                         <br/>
-                        <Text fontSize="2rem">Mi nombre es Claudio Chametla y soy progrador web. </Text>
-                    
+                        <Text color="white" fontSize="2rem">Mi nombre es Claudio Chametla y soy progrador web. </Text>
                     </Box>
-                </Center>
+            </Center>
         </VStack>
     )
 

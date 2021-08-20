@@ -1,8 +1,11 @@
-import { useColorMode, Switch,Flex, Button,Box, VStack } from '@chakra-ui/react'
+import { useColorMode, Switch,Flex, Button,Box, VStack,IconButton } from '@chakra-ui/react'
 import NextLink from 'next/link'
+import {useState} from 'react'
 
 
-const navbar = () => {
+const DarkModeSwitch = () => {
+  const { colorMode, toggleColorMode } = useColorMode()
+  const isDark = colorMode === 'dark'
   return (
     <Flex
       position="fixed"
@@ -11,9 +14,21 @@ const navbar = () => {
       align="center"
       zIndex="999"
     >
-      <Box h="100px"/>
+      <Switch
+      position="fixed"
+      top="1rem"
+      right="1rem"
+      color="green"
+      isChecked={isDark}
+      onChange={toggleColorMode}
+    />
+      <Box h="150px"/>
         
-        <Flex>
+        <Flex
+          bgGradient="linear(to-r, pink.700, blue.500)"
+          borderRadius="full"
+
+        >
         <NextLink href="/" >
             <Button
               as="a"
@@ -22,6 +37,8 @@ const navbar = () => {
               my={5}
               w="100%"
               scroll="true"
+              color="white"
+              
               >
                 Inicio
               </Button>
@@ -35,7 +52,7 @@ const navbar = () => {
               my={5}
               w="100%"
               scroll="true"
-              
+              color="white"
               
               >
                 Proyectos
@@ -50,6 +67,7 @@ const navbar = () => {
               my={5}
               w="100%"  
               scroll="true"
+              color="white"
               >
                 Habilidades
               </Button>
@@ -62,7 +80,8 @@ const navbar = () => {
               aria-label="Home"
               my={5}
               w="100%"
-              scroll="true"    
+              scroll="true"
+              color="white"    
             >
               Acerca de mi
               </Button>
@@ -81,4 +100,4 @@ const navbar = () => {
     </Flex>
   )
 }
-export default navbar
+export default DarkModeSwitch

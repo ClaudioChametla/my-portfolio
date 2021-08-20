@@ -45,7 +45,7 @@ const proyectos = () =>{
 						alt="GitHub"
 						width="100%"
 						height="100%"
-						borderRadius="10%"
+						borderRadius="full"
 					/>
 					GitHub
 				</Link>
@@ -58,7 +58,7 @@ const proyectos = () =>{
 				textAlign="center"
 				fontStyle="cursive"
         fontSize="2rem"
-				borderRadius="10%"
+				borderRadius="full"
         padding="10"
 				>
 				<Link
@@ -66,11 +66,11 @@ const proyectos = () =>{
 					target="-blank"
 					_hover={{ color: "purple.400" }}
 				>
-					<Image src="https://lh3.googleusercontent.com/proxy/e3r93qwCMoYG24iLLpxtv7v9yn42mBFTI60v42Mw9q8aJWI90gNujOGP1o8PR3_kUv8IiS4BBjffg5UK8cGfqxFLl6_7lwPd5_8Pk93Lg-BPTCV5KB-ig-PUb_JbCg"
+					<Image src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png"
 						alt="Codepen"
 						width="100%"
 						height="100%"
-						borderRadius="10%"
+						borderRadius="full"
 					/>
 					CodePen
 				</Link>

@@ -8,9 +8,8 @@ export default function PHabilidades(){
     return(
         <Stack>
             <Center flexDir="column">
-                <Box h="100px"/>
-                <NavBar/>
                 <Hero/>
+                <NavBar/>
                 <Box h="100px"/>
                 <Habilidades/>
                 <Box h="100px"/>    

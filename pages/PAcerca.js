@@ -8,9 +8,8 @@ export default function PAcerca(){
     return(
         <Stack>
             <Center flexDir="column">
-                <Box h="100px"/>
-                <NavBar/>
                 <Hero/>
+                <NavBar/>
                 <Acerca/>
             </Center>
             <Footer/>

@@ -3,7 +3,8 @@ import { List, ListItem, ListIcon,MdCheckCircle,Link,Text, Image,VStack,Box, Cen
 const habilidades = () => {
   return(
     
-        <Center w="100%" flexDir="column">
+    
+        <Center w="80%" flexDir="column">
           <Text fontSize="6xl" fontFamily="cursive" >Habilidades</Text>
           <Text fontSize="20px" >Algunos de las habilidades que domino en el entorno de desarrollador web son las siguientes:  </Text>
           <br/>
@@ -34,14 +35,7 @@ const habilidades = () => {
                 <ListIcon as={MdCheckCircle} color="green.500" />
                   JAVASCRIPT
                 </ListItem>
-                <ListItem>
-                <ListIcon as={MdCheckCircle} color="green.500" />
-                  REACT
-                </ListItem>
-                <ListItem>
-                <ListIcon as={MdCheckCircle} color="green.500" />
-                  NEXT JS
-                </ListItem>
+                
                 
               </List>
             </VStack>

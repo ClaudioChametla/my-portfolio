@@ -1,11 +1,9 @@
 import { useColorMode, Switch,Flex, Button,Box, VStack,IconButton } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import {useState} from 'react'
-
 
 const DarkModeSwitch = () => {
   const { colorMode, toggleColorMode } = useColorMode()
-  const isDark = colorMode === 'dark'
+  const modoOscuro = colorMode === 'dark'
   return (
     <Flex
       position="fixed"
@@ -19,7 +17,7 @@ const DarkModeSwitch = () => {
       top="1rem"
       right="1rem"
       color="green"
-      isChecked={isDark}
+      isChecked={modoOscuro}
       onChange={toggleColorMode}
     />
       <Box h="150px"/>
@@ -42,7 +40,6 @@ const DarkModeSwitch = () => {
               >
                 Inicio
               </Button>
-
           </NextLink>
           <NextLink href="/PProyectos" >
             <Button
@@ -57,7 +54,6 @@ const DarkModeSwitch = () => {
               >
                 Proyectos
               </Button>
-
           </NextLink>
           <NextLink href="/PHabilidades" >
             <Button
@@ -71,7 +67,6 @@ const DarkModeSwitch = () => {
               >
                 Habilidades
               </Button>
-
           </NextLink>
           <NextLink href="/PAcerca" passHref>
             <Button
@@ -85,16 +80,7 @@ const DarkModeSwitch = () => {
             >
               Acerca de mi
               </Button>
-
           </NextLink>
-
-
-          
-
-          
-
-
-
         </Flex>
         
     </Flex>

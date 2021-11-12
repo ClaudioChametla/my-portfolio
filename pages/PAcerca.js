@@ -14,9 +14,6 @@ export default function PAcerca(){
                 <Box h="100px"/>
             </Center>
             <Footer/>
-      </Stack>
-
-
+        </Stack>
     )
-
 }

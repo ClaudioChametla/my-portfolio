@@ -16,7 +16,7 @@ const footer = () => {
                     borderRadius="full"
                     w="130px" 
                     h="auto" 
-                    src="https://scontent.fmex33-1.fna.fbcdn.net/v/t1.6435-9/83245201_1561723720649296_5245982117438947328_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=174925&_nc_eui2=AeEjX_e4IFK2KtFu_DCgCoDWsd5Lk4ZH8ICx3kuThkfwgDXIDJFvNvd9uealUdNRWXZAOhbUiKx7sdzwehukhx5-&_nc_ohc=YqH_rrENSSQAX8PCaQj&_nc_ht=scontent.fmex33-1.fna&oh=7f01c79bf39e65c9ff120bc45a6192d6&oe=61412457" 
+                    src="images/CChametla.jpg" 
                     alt="claudiofooterfoto" />
 
                     
